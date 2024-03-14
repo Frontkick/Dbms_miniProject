@@ -1,0 +1,36 @@
+digraph {
+	Movies [label=Movies]
+	"Movies.movie_id" [label=movie_id]
+	Movies -> "Movies.movie_id"
+	"Movies.title" [label=title]
+	Movies -> "Movies.title"
+	"Movies.release_year" [label=release_year]
+	Movies -> "Movies.release_year"
+	"Movies.genre" [label=genre]
+	Movies -> "Movies.genre"
+	"Movies.image_link" [label=image_link]
+	Movies -> "Movies.image_link"
+	"Movies.director" [label=director]
+	Movies -> "Movies.director"
+	"Movies.video_link" [label=video_link]
+	Movies -> "Movies.video_link"
+	"Movies.runtime_minutes" [label=runtime_minutes]
+	Movies -> "Movies.runtime_minutes"
+	Actors [label=Actors]
+	"Actors.actor_id" [label=actor_id]
+	Actors -> "Actors.actor_id"
+	"Actors.name" [label=name]
+	Actors -> "Actors.name"
+	MovieActors [label=MovieActors]
+	"MovieActors.movie_id" [label=movie_id]
+	MovieActors -> "MovieActors.movie_id"
+	"MovieActors.actor_id" [label=actor_id]
+	MovieActors -> "MovieActors.actor_id"
+	Reviews [label=Reviews]
+	"Reviews.review_id" [label=review_id]
+	Reviews -> "Reviews.review_id"
+	"Reviews.movie_id" [label=movie_id]
+	Reviews -> "Reviews.movie_id"
+	"Reviews.rating" [label=rating]
+	Reviews -> "Reviews.rating"
+}
