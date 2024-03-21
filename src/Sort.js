@@ -68,7 +68,7 @@ function Sort() {
     return (
         <div>
             <h2>Filter Members by Membership Type</h2>
-            <select value={membershipType} onChange={handleMembershipTypeChange}>
+            <select className='text-black' value={membershipType} onChange={handleMembershipTypeChange}>
                 <option value="">All</option>
                 <option value="Basic">Basic</option>
                 <option value="Gold">Gold</option>

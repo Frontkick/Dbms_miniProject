@@ -13,7 +13,12 @@ const MovieComponent = () => {
 
     const fetchMovies = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/movies?${selectedOption}=${searchValue}`);
+            let endpoint = `http://localhost:5000/movies?${selectedOption}=${searchValue}`;
+            // Modify endpoint for 'lang' option
+            if (selectedOption === 'lang') {
+                endpoint = `http://localhost:5000/movies/language/${searchValue}`;
+            }
+            const response = await axios.get(endpoint);
             setMovies(response.data);
         } catch (error) {
             console.error('Error fetching movies:', error);
@@ -33,7 +38,6 @@ const MovieComponent = () => {
         // Fetch movies based on the selected option and the entered value
         fetchMovies();
     };
-    
 
     return (
         <div>
@@ -45,6 +49,8 @@ const MovieComponent = () => {
                         <option value="name">Title</option>
                         <option value="rating">Rating</option>
                         <option value="genre">Genre</option>
+                        {/* Add language option */}
+                        <option value="lang">Language</option>
                     </select>
                     <input className="border border-black rounded-xl text-black" type="text" value={searchValue} onChange={handleInputChange} />
                     <button className="mx-5 border border-black rounded-lg text-black bg-white" type="submit">Search</button>
@@ -70,6 +76,7 @@ const MovieComponent = () => {
                         <p>Runtime: {movie.runtime_minutes} minutes</p>
                         <p>Cast: {movie.cast.join(', ')}</p>
                         <p>Rating: {(movie.rating*100)/100} / 10</p>
+                        <p>Language: {movie.language}</p>
                         <div className='mt-10'></div>
                         <hr/>
                         <div className='mt-10'></div>

@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 body{
-    background-color: black;
+    background-image: url("http://fitnase.e-plugins.com/wp-content/uploads/2021/06/home-slide-1.jpg");
     color: white;
 }
+
+/* body{
+    background-color: black;
+    color: white;
+} */
+
+
+    
