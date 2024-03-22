@@ -40,7 +40,7 @@ function App() {
    
   return (
     <div className=''>
-      {/* <div>
+      <div>
         <MovieComponent/>
         <div className='pt-5'></div>
       </div>
@@ -58,28 +58,28 @@ function App() {
           </button>
           {showUpdateMovie2 && <MovieForm />}
         </div>
-      </div> */}
+      </div>
 
-        <Router>
-        <Navbar/>
-            <Routes>
-                <Route path="Equipments" element={<Equipments/>} />
-                <Route path="/InsertMembers" element={<InsertMembers/>} />
-                <Route
-                    path="/Members"
-                    element={<MembersTable/>}
-                />
-                <Route
-                    path="/price"
-                    element={<Membership_price/>}
-                />
-                <Route path="/trainers" element={<Trainer_table />} />
-                <Route path="/updateTrainer" element={<Update_Trainer />} />
-                <Route path="/allmembers" element={<AllMembers/>} />
-                <Route path="/insertTrainer" element={<InsertTrainer/>}></Route>
+        // <Router>
+        // <Navbar/>
+        //     <Routes>
+        //         <Route path="Equipments" element={<Equipments/>} />
+        //         <Route path="/InsertMembers" element={<InsertMembers/>} />
+        //         <Route
+        //             path="/Members"
+        //             element={<MembersTable/>}
+        //         />
+        //         <Route
+        //             path="/price"
+        //             element={<Membership_price/>}
+        //         />
+        //         <Route path="/trainers" element={<Trainer_table />} />
+        //         <Route path="/updateTrainer" element={<Update_Trainer />} />
+        //         <Route path="/allmembers" element={<AllMembers/>} />
+        //         <Route path="/insertTrainer" element={<InsertTrainer/>}></Route>
                 
-            </Routes>
-        </Router>
+        //     </Routes>
+        // </Router>
 
       
     </div>
