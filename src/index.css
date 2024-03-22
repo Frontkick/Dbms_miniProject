@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+/* body{
     background-image: url("http://fitnase.e-plugins.com/wp-content/uploads/2021/06/home-slide-1.jpg");
     color: white;
-}
+} */
 
-/* body{
+body{
     background-color: black;
     color: white;
-} */
+}
 
 
     
